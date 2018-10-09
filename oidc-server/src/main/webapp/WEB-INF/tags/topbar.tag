@@ -26,18 +26,18 @@
 		</c:choose>
 	</c:otherwise>
 </c:choose>
-<spring:message code="topbar.ribbon" var="message"/>
+<spring:message code="topbar.ribbon" var="message" text=""/>
 <c:if test="${not empty message}">
 	<div class="corner-ribbon red"><spring:message code="topbar.ribbon"/></div>
 </c:if>
 <div class="header">
   <div class="text-center ssp-logo">
-    <a href="<spring:message code="topbar.org_url"/>" target="_blank">
-      <img src="<spring:message code="topbar.org_logo"/>" alt="<spring:message code="topbar.org_title"/>">
+    <a href="<spring:message code="topbar.org_url" text=""/>" target="_blank">
+      <img src="<spring:message code="topbar.org_logo" text=""/>" alt="<spring:message code="topbar.org_title" text=""/>">
     </a>
   </div>
   <h1 class="text-center">
-    <spring:message code="topbar.title"/>
+    <spring:message code="topbar.title" text=""/>
   </h1>
 </div>
 <div class="navbar navbar-fixed-top">

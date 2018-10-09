@@ -6,20 +6,23 @@
 <div id="push"></div>
 </div>
 <!-- end #wrap -->
-<div id="cookies">
-    <div id="cookies-wrapper">
-        <p>
-            <spring:message code="openconext.footer.cookies_text"/>
-            <a href="<spring:message code="openconext.footer.cookies_link_url"/>" target="_blank">
-            <spring:message code="openconext.footer.cookies_link_text"/>
+<spring:message code="openconext.footer.cookies_text" var="message" text=""/>
+<c:if test="${not empty message}">
+    <div id="cookies">
+        <div id="cookies-wrapper">
+            <p>
+                <spring:message code="openconext.footer.cookies_text" text=""/>
+                <a href="<spring:message code="openconext.footer.cookies_link_url" text=""/>" target="_blank">
+                <spring:message code="openconext.footer.cookies_link_text" text=""/>
+                </a>
+            </p>
+            <a id="js-accept-cookies" class="cookies-ok" href="#">
+                <spring:message code="openconext.footer.cookies_accept_btn_text" text=""/>
             </a>
-        </p>
-        <a id="js-accept-cookies" class="cookies-ok" href="#">
-            <spring:message code="openconext.footer.cookies_accept_btn_text"/>
-        </a>
 
+        </div>
     </div>
-</div>
+</c:if>
 <div id="footer">
         <div class="container">
 		<div class="row">
@@ -29,7 +32,7 @@
 			</div>
 			<div class="col-sm-3 ssp-footer__item powered">
 				<div class="ssp-footer__item__powered">
-				 	Powered by <a href="<spring:message code="openconext.footer.git_link"/>" target="_blank"><spring:message code="openconext.footer.git_project"/></a>
+				 	Powered by <a href="<spring:message code="openconext.footer.git_link" text=""/>" target="_blank"><spring:message code="openconext.footer.git_project" text=""/></a>
 				</div>
 			</div>
 		</div>
